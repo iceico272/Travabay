@@ -1,5 +1,8 @@
 {
-  "/admins/(auth)/login/page": "app/admins/(auth)/login/page.js",
   "/admins/(dashboard)/dashboard/page": "app/admins/(dashboard)/dashboard/page.js",
-  "/admins/(dashboard)/users/admin/page": "app/admins/(dashboard)/users/admin/page.js"
+  "/admins/(dashboard)/users/frontend/page": "app/admins/(dashboard)/users/frontend/page.js",
+  "/admins/(dashboard)/users/admin/page": "app/admins/(dashboard)/users/admin/page.js",
+  "/admins/(dashboard)/categories/page": "app/admins/(dashboard)/categories/page.js",
+  "/admins/(dashboard)/categories/subcategory/countries/page": "app/admins/(dashboard)/categories/subcategory/countries/page.js",
+  "/admins/(dashboard)/categories/subcategory/page": "app/admins/(dashboard)/categories/subcategory/page.js"
 }

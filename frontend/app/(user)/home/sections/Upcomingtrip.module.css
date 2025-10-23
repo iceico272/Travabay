@@ -1,0 +1,243 @@
+ .outerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px; /* safe side padding */
+  box-sizing: border-box;
+  
+}
+
+.topSection {
+  margin: 0 auto 20px auto;
+}
+
+/* Header */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.viewAll {
+  background: #157dc2;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.viewAll svg {
+  font-size: 14px;
+  color: white;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex-wrap: wrap;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  flex: 0 0 auto;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 20px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.activeTab {
+  background: #c2edf3;
+  color: #157dc2;
+  border: 1px solid #157dc2;
+}
+
+/* Slick adjustments → remove overlap */
+.slick-slide > div {
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.slick-list {
+  margin: 0 -8px;
+  overflow: hidden;
+}
+.slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Card */
+.cardWrapper {
+  height: 100%;
+  padding: 0 12px;   /* 👈 space between cards */
+  box-sizing: border-box;
+}
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* responsive ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.card:hover .image {
+  transform: scale(1.05);
+  filter: contrast(1.1);
+}
+
+/* Price tag */
+.priceTag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: yellow;
+  border: 2px solid white;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  z-index: 2;
+}
+.oldPrice {
+  position: relative;
+  color: red;
+  font-size: 11px;
+}
+.oldPrice::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1.2px solid red;
+  transform: rotate(-15deg);
+}
+.newPrice {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Overlay */
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 40%);
+  color: #fff;
+  padding: 12px;
+}
+.card .overlay h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.details span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.details .left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: #157dc2;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+.prev { left: 8px; }
+.next { right: 8px; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .headerRow { flex-direction: column; align-items: flex-start; }
+  .viewAll { font-size: 14px; padding: 5px 10px; }
+}
+@media (max-width: 768px) {
+  .card { aspect-ratio: 4 / 5; }
+  .overlay h3 { font-size: 13px; }
+  .details { font-size: 11px; }
+}
+@media (max-width: 600px) {
+  .arrow { display: none !important; }
+  .priceTag { font-size: 10px; padding: 2px 6px; }
+  .overlay { padding: 10px; }
+}
+@media (max-width: 480px) {
+  .overlay h3 { font-size: 12px; }
+  .details { font-size: 10px; }
+  .viewAll svg { display: none; }
+}
+
+/* ========================
+   Global Slick Overrides
+   ======================== */
+:global {
+  .slick-slide > div {
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .slick-list {
+    margin: 0 -12px;
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+}

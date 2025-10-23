@@ -1,0 +1,380 @@
+/* Container */
+.container {
+  width: 100%;
+  background: #f9fafc;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 3rem;
+}
+/* Dates Bar */
+.datesBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 2rem;
+}
+
+.monthDates {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.dateTag {
+  background: #f0f0f0;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.monthWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.monthDatesInline {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* Banner */
+.banner {
+  margin-top: 130px; /* equal to navbar height */
+  height: 350px;
+  background: url("/images/up.jpg") center/cover no-repeat; /* change path */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay for better text visibility */
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness */
+  z-index: 1;
+}
+
+.banner h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+
+/* Main Layout */
+.main {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Filter Section */
+.filterSection {
+  margin-bottom: 1.8rem;
+}
+.filterSection label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* Destination Buttons */
+.destinations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.destLabel {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  background: #f2f4f8;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+.destLabel:hover {
+  background: #e0e7ff;
+}
+.destLabel svg {
+  font-size: 0.85rem;
+}
+.active {
+  background: #0070f3;
+  color: #fff;
+}
+
+/* Sub Destinations */
+.subDestinations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.subDestinations label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.closeIcon {
+  cursor: pointer;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+/* Range Sliders */
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.range input[type="range"] {
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: #e5e7eb;
+  outline: none;
+  cursor: pointer;
+}
+.range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0070f3;
+  cursor: pointer;
+}
+.rangeValues {
+  font-size: 0.85rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Months */
+.months {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.months label {
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button {
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.buttons button:hover {
+  background: #0059c9;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Month Bar */
+.monthBar {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.monthBtn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.monthBtn:hover {
+  background: #f2f4f8;
+}
+.activeMonth {
+  background: #0070f3;
+  color: #fff;
+  border-color: #0070f3;
+}
+
+/* Trips Grid */
+.tripsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Trip Card */
+.tripCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+.tripCard:hover {
+  transform: translateY(-5px);
+}
+
+.tripImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tripInfo {
+  padding: 1rem;
+}
+.tripInfo h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+/* Details */
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+.details span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Price */
+.priceBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.oldPrice {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+}
+.newPrice {
+  color: #0070f3;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Button */
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: #0070f3;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.viewBtn:hover {
+  background: #0059c9;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes a horizontal filter bar */
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  }
+
+  .filterSection {
+    flex: 1 1 45%;
+    margin-bottom: 0;
+  }
+
+  .destinations {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .buttons {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .filterSection {
+    flex: 1 1 100%;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}

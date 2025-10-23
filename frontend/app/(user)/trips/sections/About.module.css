@@ -1,0 +1,25 @@
+.aboutSection {
+    margin-bottom: 40px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .readBtn {
+    background: none;
+    border: none;
+    color: #157dc2;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .text {
+    margin-top: 12px;
+    color: #444;
+    line-height: 1.6;
+  }
+  

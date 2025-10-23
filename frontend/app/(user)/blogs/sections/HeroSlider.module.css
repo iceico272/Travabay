@@ -1,0 +1,163 @@
+.sliderWrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding-top: 70px; /* adjust according to your navbar height */
+}
+
+.slideContent {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 60vh; /* responsive height */
+  min-height: 300px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.textWrapper {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+  z-index: 2;
+  color: #fff;
+  max-width: 50%;
+}
+
+.title {
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  min-font-size: 20px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #0070f3;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.readMore {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+  background: #00bfff;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .textWrapper {
+    max-width: 60%;
+    bottom: 12%;
+  }
+  .title {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .slideContent {
+    height: 45vh;
+  }
+  .textWrapper {
+    max-width: 75%;
+    bottom: 10%;
+  }
+  .title {
+    font-size: 5vw;
+  }
+  .readMore {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideContent {
+    height: 35vh;
+  }
+  .textWrapper {
+    max-width: 90%;
+    bottom: 8%;
+  }
+  .title {
+    font-size: 6vw;
+  }
+  .tags {
+    gap: 5px;
+  }
+  .tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+  .meta {
+    font-size: 0.8rem;
+  }
+  .readMore {
+    font-size: 0.8rem;
+  }
+}
+/* Hide navigation arrows on small screens */
+/* Hide navigation arrows on small screens */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

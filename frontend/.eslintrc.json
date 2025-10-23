@@ -1,0 +1,9 @@
+{
+    "extends": "next/core-web-vitals",
+    "rules": {
+      "@typescript-eslint/no-require-imports": "off",  // Disables require() bans everywhere
+      // Add your previous disables if needed, e.g.:
+      "react-hooks/exhaustive-deps": "off",
+      "@typescript-eslint/no-unused-vars": "off"
+    }
+  }

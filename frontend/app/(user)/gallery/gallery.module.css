@@ -1,0 +1,273 @@
+/* Hero Section */
+.heroSection {
+  position: relative;
+  top: 180px;
+  width: 100%;
+  height: 50vh; 
+  min-height: 200px; 
+  background: url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.heroContent h1 {
+  font-size: 3rem; /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.heroContent p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+/* Main Container */
+.mainContainer {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 15px; 
+  overflow-x: hidden; 
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  position: relative;
+  top: 120px;
+  z-index: 2;
+  padding: 40px 20px;
+  background: #fff;
+  margin-top: -40px; /* overlap effect */
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.breadcrumbs a {
+  color: #0070f3;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap; /* Wrap on small screens */
+  justify-content: center; /* Center tabs */
+  overflow-x: auto; /* Allow horizontal scroll if needed on very small screens */
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+.tabButton {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-width: 80px; /* Minimum width for buttons */
+}
+
+.tabButton:hover {
+  background: #f0f0f0;
+}
+
+.tabButton.active {
+  background: #0070f3;
+  color: #fff;
+  border-color: #0070f3;
+}
+
+.tabButton.active:hover {
+  background: #005bb5;
+}
+
+/* Tab Content */
+.tabContent {
+  display: none;
+}
+
+.tabContent.active {
+  display: block;
+}
+
+/* Gallery - Masonry Layout for random arrangement */
+.imageGallery {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+/* Image Wrapper */
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+}
+/* Images */
+.animatedImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition-delay: calc(0.05s * var(--index));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tabContent.active .animatedImage {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.overlay p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .imageGallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 40vh;
+    min-height: 250px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 0.875rem;
+  }
+
+  .contentWrapper {
+    padding: 30px 15px;
+    margin-top: -30px;
+  }
+
+  .tabs {
+    justify-content: flex-start; /* Align left on mobile */
+    gap: 8px;
+  }
+
+  .tabButton {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    min-width: auto; /* Allow smaller buttons */
+  }
+
+  .imageGallery {
+    column-count: 2;
+  }
+
+  .breadcrumbs {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 35vh;
+    min-height: 200px;
+  }
+
+  .heroContent h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroContent p {
+    font-size: 0.75rem;
+  }
+
+  .contentWrapper {
+    padding: 20px 10px;
+    margin-top: -20px;
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically on very small screens */
+    align-items: center;
+    overflow-x: visible;
+  }
+
+  .tabButton {
+    width: 100%; /* Full width buttons */
+    margin-bottom: 8px;
+  }
+
+  .imageGallery {
+    column-count: 1;
+  }
+}

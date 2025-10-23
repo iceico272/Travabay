@@ -1,0 +1,240 @@
+/* OUTER WRAPPER */
+.sectionWrapper {
+  width: 100%;
+  background: linear-gradient(rgba(213, 247, 228, 0) 0%, rgba(255, 255, 236, 0) 0.52%, rgba(255, 248, 209, 0.8) 19.27%, rgba(255, 248, 209, 0.8) 88.54%, rgba(255, 255, 236, 0) 100%);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* INNER WRAPPER */
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  height: 45vh;
+  min-height: 320px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediaWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.mediaImage,
+.mediaVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Video ke liye special case */
+.mediaVideo {
+  object-fit: cover; 
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.heroContent p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.exploreBtn {
+  background: #ffd500;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.exploreBtn:hover {
+  background: #ffb800;
+}
+
+/* SLIDER SECTION */
+.sliderWrapper {
+  position: relative;
+  margin-top: -40px;
+  padding: 0 10px 60px;
+  z-index: 3;
+  max-width: 1200px; /* slider ka max width */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.stackedSlide {
+  width: 220px;  
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border: 4px solid #fff; /* white border */
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  height: 320px;  /* zyada height */
+  width: 100%;    /* swiper control karega */
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.card:hover .cardImg {
+  transform: scale(1.08);
+  filter: contrast(1.1);
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  padding: 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.cardContent h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.cardContent p {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.swiperDesktop { display: block; }
+.swiperMobile  { display: none; }
+/* SWIPER OVERRIDES */
+.mySwiper :global(.swiper-button-next),
+.mySwiper :global(.swiper-button-prev) {
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mySwiper :global(.swiper-button-next:after),
+.mySwiper :global(.swiper-button-prev:after) {
+  font-size: 16px;
+  font-weight: bold;
+}
+.mySwiper :global(.swiper-pagination-bullet) {
+  background: #bbb;
+  opacity: 1;
+}
+.mySwiper :global(.swiper-pagination-bullet-active) {
+  background: #00bfff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+  .heroContent p {
+    font-size: 1rem;
+  }
+  .card {
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 260px;
+  }
+  .heroContent {
+    max-width: 100%;
+    text-align: center;
+  }
+  .heroContent h1 {
+    font-size: 1.8rem;
+  }
+  .heroContent p {
+    font-size: 0.95rem;
+  }
+  .sliderWrapper {
+    max-width: 90%;
+  }
+  .card {
+    height: 280px;
+  }
+}
+@media (max-width: 648px) {
+  .hero {
+    display: none; /* hero hide */
+  }
+
+
+  .sliderWrapper {
+    margin-top: 0;
+    padding: 40px 0;
+    
+  }
+
+  .mySwiper {
+    overflow: visible; /* cards side se visible ho */
+  }
+
+  .stackedSlide {
+    width: 220px;   /* thoda chhota card */
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    min-height: 220px;
+  }
+  .heroContent h1 {
+    font-size: 1.5rem;
+  }
+  .heroContent p {
+    font-size: 0.85rem;
+  }
+  .card {
+    height: 260px;
+  }
+}

@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.meta {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-weight: 600;
+  color: #fff;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: rgba(255,255,255,0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}

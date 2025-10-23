@@ -1,0 +1,145 @@
+.tripsSection {
+    margin-bottom: 60px;
+  }
+  
+  .heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .grid > a {
+      display: flex;
+      text-decoration: none; /* Remove underline from Link */
+  }
+  
+  .grid > a:hover .card {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .image {
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .priceTag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffd700;
+    border: 2px solid #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 2;
+  }
+  
+  /* .oldPrice {
+    text-decoration: line-through;
+    color: red;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 4px;
+  } */
+  
+  .newPrice {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .onwards {
+    font-size: 11px;
+    color: #333;
+  }
+  
+  .cardBody {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #157dc2;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    margin-right: 5px;
+  }
+  
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 6px 0;
+  }
+  
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    color: #ddd;
+  }
+  
+  /* Swiper arrow hide in mobile */
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none !important;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+
+  
+  /* Mobile responsive */
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

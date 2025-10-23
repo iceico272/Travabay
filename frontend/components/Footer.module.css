@@ -1,0 +1,196 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.footer p{
+  text-align: justify;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  word-spacing: 2px;
+}
+
+.footerSection h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.footerSection ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footerSection ul li a:hover {
+  text-decoration: underline;
+}
+
+.footerSection ul li a span {
+  margin-left: 5px;
+}
+
+.ruler {
+  border: 0;
+  height: 1px;
+  background: #444;
+  margin: 10px 0;
+}
+
+/* Social Media Section */
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.socialLabel {
+  font-size: 0.9em;
+  color: #bbb;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socialIcon {
+  color: #fff;
+  font-size: 1.4em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover background + animation */
+.socialIcon:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  transition: all 0.4s ease;
+}
+
+/* Hover hone par icon ka apna original color show */
+.socialIcon.facebook:hover {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.socialIcon.instagram:hover {
+  color: #e4405f; /* Instagram Pink */
+}
+
+.socialIcon.linkedin:hover {
+  color: #0a66c2; /* LinkedIn Blue */
+}
+
+.bottomBarWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #157DC2;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #157DC2;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bottomBar p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.bottomBar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.bottomBar a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .bottomBar {
+    flex-direction: column;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .bottomBar p {
+    font-size: 13px;
+  }
+
+  .bottomBar a {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bottomBar {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .bottomBar p {
+    font-size: 12px;
+  }
+
+  .bottomBar a {
+    margin: 0 4px;
+  }
+}
+
+#root {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}

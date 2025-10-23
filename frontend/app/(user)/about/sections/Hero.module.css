@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  top: 180px;
+  margin: 0 auto;
+  height: 10vh;
+  z-index: 1000;
+  margin-bottom: 55vh;
+  box-sizing: border-box;
+  
+  }
+  
+  .bannerWrapper {
+    width: 100%;
+    
+  }
+  
+  .bannerImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      margin-bottom: 30vh;  
+    }
+  
+    .bannerImage {
+      height: 250px; 
+    }
+  }
+  
+  /* Mobiles */
+  @media (max-width: 768px) {
+    .container {
+      margin-bottom: 25vh; 
+      height: auto; 
+    }
+  
+    .bannerImage {
+      height: 200px;
+    }
+  }
+  
+  /* Small Mobiles */
+  @media (max-width: 480px) {
+    .container {
+      margin-bottom: 15vh; 
+    }
+  
+    .bannerImage {
+      height: 160px;
+    }
+  }
+  

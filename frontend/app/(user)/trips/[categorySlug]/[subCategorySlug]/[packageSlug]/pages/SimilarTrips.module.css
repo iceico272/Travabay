@@ -1,0 +1,204 @@
+.similarTrips {
+    padding: 40px 60px;
+    background: #f9fafb;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Grid */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: flex-start; /* left align */
+    max-width: 1000px;
+  }
+  
+  /* Card */
+  .card {
+    width: 280px; /* 👈 smaller width */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Image */
+  .imageWrapper {
+    position: relative;
+  }
+  
+  .image {
+    width: 100%;
+    height: 140px; /* smaller image */
+    object-fit: cover;
+  }
+  
+  .tag,
+  .tagSecondary {
+    position: absolute;
+    top: 8px;
+    background: #f59e0b;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .tagSecondary {
+    right: 8px;
+    background: #ef4444;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  /* Body */
+  .cardBody {
+    padding: 12px 14px;
+  }
+  
+  .title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+  
+  .reviews {
+    font-size: 0.8rem;
+    color: #f59e0b;
+    margin-bottom: 4px;
+  }
+  
+  .inclusive {
+    font-size: 0.8rem;
+    color: #2563eb;
+    margin-bottom: 8px;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .details strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #111827;
+  }
+  
+  .pricing {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 6px;
+  }
+  
+  .emi {
+    font-size: 0.75rem;
+    color: #4b5563;
+  }
+  
+  .emi span {
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  .price {
+    font-size: 0.8rem;
+    color: #111827;
+    margin-top: 2px;
+  }
+  
+  .price strong {
+    font-size: 0.95rem;
+    color: #111827;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  
+  .viewBtn,
+  .bookBtn {
+    flex: 1;
+    padding: 6px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.25s ease;
+  }
+  
+  .viewBtn {
+    background: #fff;
+    border: 1.2px solid #2563eb;
+    color: #2563eb;
+  }
+  
+  .viewBtn:hover {
+    background: #2563eb;
+    color: #fff;
+  }
+  
+  .bookBtn {
+    background: #ffd166;
+    border: none;
+    color: #111827;
+  }
+  
+  .bookBtn:hover {
+    filter: brightness(1.05);
+  }
+  
+  /* ✅ Responsive */
+  @media (max-width: 900px) {
+    .similarTrips {
+      padding: 30px 20px;
+    }
+  
+    .grid {
+      justify-content: center;
+    }
+  
+    .card {
+      width: 260px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .card {
+      width: 100%;
+    }
+  
+    .heading {
+      font-size: 1.2rem;
+    }
+  }

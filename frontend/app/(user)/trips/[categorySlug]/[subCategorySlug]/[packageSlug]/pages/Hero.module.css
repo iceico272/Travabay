@@ -1,0 +1,451 @@
+/*
+  styles file: /styles/TripInfo/Hero.module.css
+  Paste the CSS below into that file.
+*/
+
+/* --- Start of CSS --- */
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    overflow: hidden;
+    min-height: 480px;
+    padding-top: 150px
+  }
+  .hero {
+    --accent: #ffd166;
+    --accent-600: #f9c233;
+    --card-bg: #ffffff;
+    --muted: #6b7280;
+  }
+  .banner {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transform-origin: center;
+  }
+  
+  .gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 10%, rgba(0,0,0,0.6) 70%);
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    gap: 28px;
+    align-items: flex-end;
+  }
+  
+  .left {
+    flex: 1.1;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 2.6rem;
+    line-height: 1.05;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.45);
+  }
+  
+  .topRow {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .rating {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    background: rgba(255,255,255,0.10);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .rating svg { display: block; }
+  .ratingNum { color: var(--accent); margin-left: 2px; }
+  .reviews { color: rgba(255,255,255,0.85); font-weight: 500; margin-left: 6px; }
+  
+  .infoBadges { display:flex; gap:10px; }
+  .badge {
+    background: rgba(255,255,255,0.08);
+    padding: 6px 10px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+  }
+  
+  .location {
+    margin: 14px 0 18px 0;
+    color: rgba(255,255,255,0.95);
+    font-size: 1.05rem;
+  }
+  
+  .highlights h4 { margin: 0 0 8px 0; font-size: 1rem; font-weight: 600; }
+  .highlights ul { display:flex; gap:10px; flex-wrap:wrap; list-style:none; padding:0; margin:0; }
+  .highlightItem { display:flex; gap:8px; align-items:center; background: rgba(255,255,255,0.08); padding:8px 12px; border-radius:999px; font-size:0.95rem; }
+  .highlightItem svg { display:block; }
+  
+  .actions { margin-top:18px; }
+  .itineraryBtn {
+    background: var(--accent-600);
+    color: #111827;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  }
+  .itineraryBtn:hover { filter: brightness(1.03); }
+  
+  /* RIGHT (cards) */
+  .right {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  /* --- Price + Form Cards --- */
+  .priceCard,
+  .formCard {
+    background: var(--card-bg, #fff);
+    color: #111827;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+    box-sizing: border-box;
+  }
+  
+  /* --- Price Card --- */
+  .priceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .priceTitle {
+    color: var(--muted, #6b7280);
+    font-size: 0.92rem;
+    margin: 0;
+  }
+  
+  .price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  
+  .ctaBtn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: linear-gradient(90deg, var(--accent, #ffd166), #ffcc33);
+    color: #111827;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease;
+  }
+  
+  .ctaBtn:hover {
+    background: linear-gradient(90deg, #ffcc33, var(--accent, #ffd166));
+  }
+  
+  .emi {
+    text-align: center;
+    margin-top: 8px;
+    color: var(--muted, #6b7280);
+    font-size: 0.9rem;
+  }
+  
+  /* --- Callback Form Card --- */
+  .formCard {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    text-align: left;
+  }
+  
+  .formCard h4 {
+    margin: 0 0 6px 0;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  
+  /* Accessible hidden label */
+  .hiddenLabel {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  /* Input Styles */
+  .formCard input[type="text"],
+  .formCard input[type="tel"] {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .formCard input[type="text"]:focus,
+  .formCard input[type="tel"]:focus {
+    border-color: var(--accent, #ffd166);
+    box-shadow: 0 0 0 3px rgba(249, 194, 51, 0.2);
+  }
+  
+  /* Phone Input Group */
+  .inputGroup {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .countryCode {
+    padding: 12px 14px;
+    background: #f3f4f6;
+    font-weight: 500;
+    color: #333;
+    border-right: 1px solid #e6e6e6;
+    white-space: nowrap;
+  }
+  
+  .inputGroup input {
+    border: none;
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    outline: none;
+    min-width: 0; /* Prevent overflow */
+    box-sizing: border-box;
+  }
+  
+  .inputGroup input:focus {
+    box-shadow: none;
+  }
+  
+  /* Button */
+  .callBtn {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent-600, #f9c233);
+    color: #111827;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s ease;
+  }
+  
+  .callBtn:hover {
+    background: #eab308;
+  }
+  
+  /* --- Responsive --- */
+  
+  /* For large tablets and below */
+  @media (max-width: 1100px) {
+    .contentWrapper {
+      gap: 28px;
+    }
+  
+    .title {
+      font-size: 2.3rem;
+      line-height: 1.25;
+    }
+  
+    .right {
+      width: 320px;
+    }
+  }
+  
+  /* --- Responsive Fix for Hero Overlap + Proper Arrangement + Center Alignment --- */
+  
+  /* Large screens adjustment */
+  @media (max-width: 1200px) {
+    .hero {
+      padding-top: 180px; /* ensures hero stays visible below navbar */
+    }
+  }
+  
+  /* Tablets and small laptops */
+  @media (max-width: 992px) {
+    .hero {
+      padding-top: 200px; /* prevents hiding under header */
+      min-height: auto;
+    }
+  
+    .container {
+      padding: 40px 24px;
+    }
+  
+    .contentWrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 32px;
+    }
+  
+    .left {
+      width: 100%;
+    }
+  
+    .right {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  
+    /* Center rating + trip info */
+    .topRow,
+    .infoBadges,
+    .highlights ul {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .rating {
+      margin-bottom: 8px;
+    }
+  
+    .itineraryBtn {
+      margin: 18px auto 0 auto;
+    }
+  }
+  
+  /* Mobile phones */
+  @media (max-width: 600px) {
+    .hero {
+      padding-top: 220px; /* ensures top content visible */
+      min-height: unset;
+    }
+  
+    .banner {
+      background-position: top center;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+  
+    .infoBadges span {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
+  
+    .contentWrapper {
+      padding: 0 16px;
+    }
+  
+    .right {
+      max-width: 100%;
+      gap: 20px;
+    }
+  
+    .priceCard,
+    .formCard {
+      padding: 16px;
+      border-radius: 10px;
+    }
+  
+    .formCard input[type="text"],
+    .formCard input[type="tel"] {
+      width: 100%;
+    }
+  
+    .inputGroup {
+      flex-wrap: nowrap;
+    }
+  
+    .callBtn,
+    .ctaBtn {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  
+    .emi {
+      font-size: 0.85rem;
+    }
+  
+    /* Center alignment on mobile */
+    .topRow,
+    .infoBadges,
+    .highlights ul {
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .rating {
+      margin-bottom: 6px;
+    }
+  
+    .highlights h4 {
+      text-align: center;
+    }
+  }
+  
+  /* Very small phones */
+  @media (max-width: 400px) {
+    .hero {
+      padding-top: 230px; /* absolute safety for smallest screens */
+    }
+  
+    .title {
+      font-size: 1.6rem;
+    }
+  
+    .contentWrapper {
+      padding: 0 12px;
+    }
+  
+    .highlightItem {
+      font-size: 0.85rem;
+      padding: 6px 8px;
+    }
+  
+    .itineraryBtn {
+      width: 100%;
+    }
+  }

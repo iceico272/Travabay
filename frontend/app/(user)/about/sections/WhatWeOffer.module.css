@@ -1,0 +1,202 @@
+/* Main wrapper */
+.mainSection {
+  padding: 60px 20px;
+}
+
+/* About Company (no background) */
+.aboutCompany {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.aboutTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeTop 1s ease forwards;
+}
+
+.aboutDescription {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  opacity: 0;
+  text-align: justify;
+  transform: translateY(20px);
+  animation: fadeTop 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Offer Section */
+.offerSection {
+  background: #f9f9f9;
+  padding: 60px 30px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeTop 1s ease forwards;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeTop 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* 2-column layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeLeft 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.icon {
+  color: #EF8F49;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.rightText {
+  border-left: 3px solid #EF8F49;
+  padding-left: 20px;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeRight 1s ease forwards;
+  animation-delay: 0.9s;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ✅ Responsive tweaks */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .aboutTitle {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .content {
+    gap: 25px;
+  }
+
+  .aboutDescription,
+  .subtitle {
+    font-size: 15px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .mainSection {
+    padding: 40px 15px;
+  }
+
+  .aboutTitle {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .aboutDescription,
+  .subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .list li {
+    justify-content: center;
+    text-align: left; /* text proper dikhe */
+    font-size: 14px;
+  }
+
+  .rightText {
+    border-left: none;
+    padding-left: 0;
+    border-top: 3px solid #EF8F49;
+    padding-top: 20px;
+    transform: translateY(30px);
+    animation: fadeTop 1s ease forwards;
+    animation-delay: 1.2s;
+    text-align: justify;
+    font-size: 14px;
+  }
+}

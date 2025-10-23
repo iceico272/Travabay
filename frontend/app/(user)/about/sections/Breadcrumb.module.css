@@ -1,0 +1,51 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the breadcrumb */
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 12px auto;
+  padding: 0 16px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  text-align: center;
+}
+
+.link {
+  color: #157DC2;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  color: #999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 13px;
+    gap: 6px;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+    gap: 4px;
+    padding: 0 8px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+
+  .separator {
+    font-size: 12px;
+  }
+}

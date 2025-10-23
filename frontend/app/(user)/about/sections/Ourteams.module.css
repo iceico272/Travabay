@@ -1,0 +1,97 @@
+.teamSection {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.title span {
+  font-weight: normal;
+  color: #666;
+}
+
+.teamGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Hide Swiper on Desktop */
+.teamSwiper {
+  display: none;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.designation {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.socials {
+  margin-bottom: 12px;
+}
+
+.socials a {
+  margin: 0 8px;
+  color: #0077b5;
+  font-size: 1.2em;
+}
+
+.separator {
+  width: 60px;
+  height: 3px;
+  background: #ffd700;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.description {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ✅ Mobile Swiper Styles */
+@media (max-width: 768px) {
+  .teamGrid {
+    display: none; /* hide grid */
+  }
+
+  .teamSwiper {
+    display: block; /* show swiper */
+  }
+
+  .card {
+    max-width: 320px;
+  }
+}

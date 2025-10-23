@@ -1,0 +1,262 @@
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background: #fff;
+}
+
+/* Scroll Animation for Sections */
+.contactInfo,
+.contactForm {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contactInfo.visible,
+.contactForm.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings */
+.contactInfo h2,
+.contactForm h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.contactInfo h2:hover,
+.contactForm h2:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.contactInfo p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.infoBlock {
+  margin-bottom: 30px;
+}
+
+.infoBlock h3 {
+  color: #0d6efd;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.infoBlock a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.infoBlock a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #0d6efd;
+  transform: scale(1.02); /* Slight zoom on focus */
+  box-shadow: 0 0 5px rgba(0, 150, 136, 0.3); /* Subtle glow */
+}
+
+.contactForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Button */
+.contactForm button {
+  background: #EF8F49;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 30%;
+  letter-spacing: 1px;
+}
+
+.contactForm button:hover {
+  background: #0d6efd;
+  transform: translateY(-2px) scale(1.05); /* Lift and slight zoom */
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.socialIcons a {
+  color: #fff;
+  font-size: 1.4em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover background + animation */
+.socialIcons a:hover {
+  background: #fff; /* Icon ke liye white bg */
+  transform: translateY(-5px); /* Fade-up effect */
+  transition: all 0.4s ease;
+}
+
+/* Hover hone par icon ka apna original color show */
+.socialIcons a.facebook:hover {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.socialIcons a.instagram:hover {
+  color: #e4405f; /* Instagram Pink */
+}
+
+.socialIcons a.linkedin:hover {
+  color: #0a66c2; /* LinkedIn Blue */
+}
+
+/* Responsive */
+
+/* Large Screens (1024px - 1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .contactContainer {
+    gap: 50px;
+    padding: 70px 30px;
+  }
+
+  .contactInfo h2,
+  .contactForm h2 {
+    font-size: 1.8rem;
+  }
+
+  .contactForm button {
+    width: 40%; /* Slightly wider button for better balance */
+  }
+
+  .socialIcons a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3em;
+  }
+}
+
+/* Medium Screens (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .contactInfo h2,
+  .contactForm h2 {
+    font-size: 1.6rem;
+  }
+
+  .contactForm button {
+    width: 50%; /* Adjust button width for medium screens */
+  }
+
+  .infoBlock .socials {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .socialIcons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2em;
+  }
+}
+
+/* Small Screens (up to 767px) - Existing styles */
+@media (max-width: 767px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .contactForm button {
+    width: 100%;
+  }
+
+  .infoBlock .socials {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .socialIcons a {
+    font-size: 1.2em;
+  }
+}
+
+/* Extra Small Screens (up to 600px) - Existing styles with refinements */
+@media (max-width: 600px) {
+  .contactInfo h2,
+  .contactForm h2 {
+    font-size: 1.5rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    padding: 12px;
+  }
+
+  .socialIcons a {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1em;
+  }
+}
